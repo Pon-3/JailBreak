@@ -1,11 +1,18 @@
 AddCSLuaFile( "cl_init.lua" ) -- Tell the server that the client need to download cl_init.lua 
- AddCSLuaFile( "shared.lua" ) --  Tell the server that the client need to download shared.lua 
+AddCSLuaFile( "shared.lua" ) --  Tell the server that the client need to download shared.lua
  
- include( 'shared.lua' ) -- Tell the server to load shared.lua 
+ include( 'shared.lua' ) -- Tell the server to load shared.lua
+ include( 'round.lua' ) -- Tell the server to load round.lua
+
+ newRound = 0
  
  function GM:PlayerInitialSpawn( ply ) -- When the player first joins the server and spawns" function 
-     ply:ConCommand( "team_menu" ) -- Run the console command when the player first spawns 
+     ply:ConCommand( "team_menu" ) -- Run the console command when the player first spawns
 	 
+	 if newRound == 0 then
+		newRound = 1
+		round_timer()
+	end
  
  end -- End the "when player first joins server and spawn" function 
  
