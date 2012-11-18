@@ -32,4 +32,4 @@ include( "shared.lua" )
  end 
  
  end 
- concommand.Add( "team_menu", set_team ) 
+ concommand.Add( "team_menu", set_team )
