@@ -1,6 +1,6 @@
 "Gamemode"
  {
- 	"name"		"Jailbreak"
+ 	"name"		"jailbreak"
  	"version"	"0.1" 
  	"up_date"	"02/12/2006" // The date this version was published. Set before release!
  
