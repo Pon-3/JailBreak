@@ -5,4 +5,6 @@
  
  team.SetUp( 1, "Prisoners", Color( 190, 190, 190, 255 ) ) 
  
- team.SetUp( 2, "Guards", Color( 0, 0, 255,, 225 ) ) 
+ team.SetUp( 2, "Guards", Color( 0, 0, 255, 225 ) ) 
+ 
+ team.SetUp( 3, "Warden", Color( 0, 0, 255, 225 ) ) 

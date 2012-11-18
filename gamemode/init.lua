@@ -30,7 +30,7 @@ AddCSLuaFile( "shared.lua" ) --  Tell the server that the client need to downloa
 		ply:Give("fists_weapon")
 
 	elseif ply:Team() == 3 then -- Otherwise, if the player is on team "Warden"...
-		ply:Give("weapon_m42)
+		ply:Give("weapon_m42")
 		ply:Give("weapon_deagle2")
 		ply:Give("weapon_mac102")
 		ply:Give("weapon_fists")
