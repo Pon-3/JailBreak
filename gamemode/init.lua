@@ -45,6 +45,13 @@ end -- This ends the function.
 	 ply:Spawn()
  end 
  
+ function team_3( ply )
+ 
+    ply:SetTeam( 3 ) //Make the player join team 3
+        ply:Spawn()
+ end
+ 
  concommand.Add( "team_1", team_1 ) //Add the command to set the players team to team 1 
- concommand.Add( "team_2", team_2 ) //Add the command to set the players team to team 2 
+ concommand.Add( "team_2", team_2 ) //Add the command to set the players team to team 2
+ concommand.Add( "team_3", team_3 ) //Add the command to set the players team to team 3
  
