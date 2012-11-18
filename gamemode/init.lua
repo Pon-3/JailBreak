@@ -17,8 +17,10 @@ AddCSLuaFile( "cl_init.lua" ) -- Tell the server that the client need to downloa
 		ply:Give("fists_weapon") -- ...then give them fists.
  
 	elseif ply:Team() == 2 then -- Otherwise, if the player is on team "Guard"...
-		ply:Give("weapon_physgun") -- ...then give them the Phys Gun.
- 
+		ply:Give("weapon_m42") -- ...then give them the Phys Gun.
+		ply:Give("weapon_deagle2")
+		ply:Give("weapon_pumpshotgun2")
+		ply:Give("fists_weapon")
 	end -- This ends the if/elseif.
  
 end -- This ends the function.
