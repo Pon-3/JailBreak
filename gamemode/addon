@@ -1,0 +1,19 @@
+"Gamemode"
+ {
+ 	"name"		"GM_test"
+ 	"version"	"0.1" 
+ 	"up_date"	"02/12/2006" // The date this version was published. Set before release!
+ 
+ 	"author_name"	"Me."
+ 	"author_email"	"myemail@gmail.com"
+ 	"author_url"	"http://www.mywebsite.com/"
+ 
+ 	"info"		"This is my modification's description. It's not very good."
+ 	"icon" 	 	"" // Icon to show in the Mods list inside Garry's Mod
+ 	"hide"		"0" // Do not hide this gamemode from the Mods list inside Garry's Mod
+ 
+	"mappattern" // This sets all maps with gt_ before the name to default the map gamemode to "GM_test"
+	{
+		"1"	"^gt_"
+	}
+  }
