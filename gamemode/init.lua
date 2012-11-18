@@ -5,14 +5,13 @@ AddCSLuaFile( "shared.lua" ) --  Tell the server that the client need to downloa
  include( 'lua/round.lua' ) -- Tell the server to load round.lua
 
  newRound = 0
- rTimer = round_timer( newRound )
  
  function GM:PlayerInitialSpawn( ply ) -- When the player first joins the server and spawns" function 
      ply:ConCommand( "team_menu" ) -- Run the console command when the player first spawns
 	 
 	 if newRound == 0 then
 		newRound = 1
-		rTimer
+		round_timer( newRound )
 	end
  
  end -- End the "when player first joins server and spawn" function 
@@ -22,13 +21,19 @@ AddCSLuaFile( "shared.lua" ) --  Tell the server that the client need to downloa
 	ply:StripWeapons() -- This command strips all weapons from the player.
  
 	if ply:Team() == 1 then --If the player is on team "Prisoner"...
-		ply:Give("fists_weapon") -- ...then give them fists.
+		ply:Give("fists_weapon")
  
 	elseif ply:Team() == 2 then -- Otherwise, if the player is on team "Guard"...
-		ply:Give("weapon_m42") -- ...then give them the Phys Gun.
+		ply:Give("weapon_m42")
 		ply:Give("weapon_deagle2")
 		ply:Give("weapon_pumpshotgun2")
 		ply:Give("fists_weapon")
+
+	elseif ply:Team() == 3 then -- Otherwise, if the player is on team "Warden"...
+		ply:Give("weapon_m42)
+		ply:Give("weapon_deagle2")
+		ply:Give("weapon_mac102")
+		ply:Give("weapon_fists")
 	end -- This ends the if/elseif.
  
 end -- This ends the function.
