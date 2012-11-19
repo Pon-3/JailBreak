@@ -3,6 +3,7 @@ AddCSLuaFile("shared.lua") --  Tell the server that the client need to download 
  
  include("shared.lua") -- Tell the server to load shared.lua
  include("lua/round.lua") -- Tell the server to load round.lua
+ include("lua/vgui/hud.lua") -- Tell the server to load hud.lua
 
  newRound = 0
  

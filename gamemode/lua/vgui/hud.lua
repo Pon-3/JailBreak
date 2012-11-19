@@ -116,7 +116,7 @@ local colors =
  
 };
  
-local function HUDPaint( )
+function HUDPaint( )
   
 	client = client or LocalPlayer( );				-- set a shortcut to the client
 	if( !client:Alive( ) ) then return; end				-- don't draw if the client is dead
@@ -150,4 +150,11 @@ local function HUDPaint( )
 	good_hud:PaintBar( cx, cy + by + th + vars.text_spacing, bar_width, vars.bar_height, colors.armor_bar, client:Armor( ) / 100 );
  
 end
-hook.Add( "HUDPaint", "PaintOurHud", HUDPaint );
+hook.Add( "HUDPaint", "PaintOurHud", HUDPaint )
+
+function hidehud(name)
+	for k, v in pairs({"CHudHealth", "CHudBattery"})do
+		if name == v then return false end
+	end
+end
+hook.Add("HUDShouldDraw", "HideOurHud", hidehud)
