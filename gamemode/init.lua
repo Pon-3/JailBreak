@@ -1,8 +1,8 @@
-AddCSLuaFile( "cl_init.lua" ) -- Tell the server that the client need to download cl_init.lua 
-AddCSLuaFile( "shared.lua" ) --  Tell the server that the client need to download shared.lua
+AddCSLuaFile("cl_init.lua") -- Tell the server that the client need to download cl_init.lua 
+AddCSLuaFile("shared.lua") --  Tell the server that the client need to download shared.lua
  
- include( 'shared.lua' ) -- Tell the server to load shared.lua
- include( 'lua/round.lua' ) -- Tell the server to load round.lua
+ include("shared.lua") -- Tell the server to load shared.lua
+ include("lua/round.lua") -- Tell the server to load round.lua
 
  newRound = 0
  
